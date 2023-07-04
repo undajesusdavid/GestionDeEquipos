@@ -1,16 +1,17 @@
-import com.undabits.User;
-import org.json.JSONObject;
 
+import com.undabits.models.Component;
 import java.util.List;
+
 
 public class Main {
 
     public static void main(String[] args){
-        List<JSONObject> users = User.all();
 
-        for (JSONObject data : users){
-            System.out.println(data);
+        List<Component> components = Component.get();
+        for (Component component: components){
+            component.print();
         }
+
     }
 
 

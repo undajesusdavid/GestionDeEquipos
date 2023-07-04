@@ -1,4 +1,4 @@
-package com.undabits;
+package com.undabits.models;
 
 import com.undabits.persistence.Persistence;
 import org.json.JSONObject;
