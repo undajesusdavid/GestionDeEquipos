@@ -11,10 +11,6 @@ public class UpdateBuilder extends QueryBuilder {
         super(table);
         this.data = data;
     }
-    public UpdateBuilder(String table, Map<String, Object> data, Map<String,Object> conditions){
-        this(table,data);
-        this.equalCondition = conditions;
-    }
 
     public UpdateBuilder where(Map<String,Object> conditions){
         this.equalCondition = conditions;

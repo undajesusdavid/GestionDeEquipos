@@ -12,13 +12,13 @@ public class SelectBuilder extends QueryBuilder {
         super(table);
     }
 
-    public SelectBuilder(String table, Map<String,Object> conditions){
-        this(table);
-        this.equalCondition = conditions;
-    }
-
     public SelectBuilder fields(String[] fields){
         this.arrayFields =  fields;
+        return this;
+    }
+
+    public SelectBuilder where(Map<String,Object> conditions){
+        this.equalCondition = conditions;
         return this;
     }
 
